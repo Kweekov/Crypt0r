@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { cryptoApi, type ApiProgressEvent } from '../services/cryptoApi'
 import { ServerVisualizer } from '../components/ServerVisualizer'
 

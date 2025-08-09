@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 function randomChoice(arr: string[], rng = Math.random){
   return arr[Math.floor(rng() * arr.length)]
