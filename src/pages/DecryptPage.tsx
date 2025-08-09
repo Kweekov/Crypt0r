@@ -32,7 +32,7 @@ export function DecryptPage() {
         <div className="space-y-3">
           <div>
             <label className="block text-sm">Парольная фраза</label>
-            <input className="input w-full mt-1 font-mono" value={passphrase} onChange={e=>setPassphrase(e.target.value)} />
+            <input className="input w-full mt-1 font-mono" value={passphrase} onChange={e=>setPassphrase(e.currentTarget.value)} />
           </div>
 
           <div className="flex gap-2 pt-1">
@@ -43,11 +43,11 @@ export function DecryptPage() {
         <div className="space-y-3">
           <div>
             <label className="block text-sm">Шифртекст (base64url)</label>
-            <textarea className="textarea w-full mt-1 font-mono" rows={7} value={ciphertext} onChange={e=>setCiphertext(e.target.value)} />
+            <textarea className="textarea w-full mt-1 font-mono" rows={7} value={ciphertext} onChange={e=>setCiphertext(e.currentTarget.value)} />
           </div>
           <div>
             <label className="block text-sm">Открытый текст</label>
-            <textarea className="textarea w-full mt-1 font-mono" rows={7} value={plaintext} onChange={e=>setPlaintext(e.target.value)} />
+            <textarea className="textarea w-full mt-1 font-mono" rows={7} value={plaintext} onChange={e=>setPlaintext(e.currentTarget.value)} />
           </div>
           {error && <div className="text-red-400">Ошибка: {error}</div>}
         </div>

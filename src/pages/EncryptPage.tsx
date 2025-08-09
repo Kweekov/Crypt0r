@@ -37,16 +37,16 @@ export function EncryptPage() {
         <div className="space-y-3">
           <div>
             <label className="block text-sm">Парольная фраза</label>
-            <input className="input w-full mt-1 font-mono" value={passphrase} onChange={e=>setPassphrase(e.target.value)} />
+            <input className="input w-full mt-1 font-mono" value={passphrase} onChange={e=>setPassphrase(e.currentTarget.value)} />
           </div>
           <div>
             <label className="block text-sm">Соль (base64url)</label>
-            <input className="input w-full mt-1 font-mono" value={salt} onChange={e=>setSalt(e.target.value)} />
+            <input className="input w-full mt-1 font-mono" value={salt} onChange={e=>setSalt(e.currentTarget.value)} />
             <div className="text-xs label-help mt-1">Соль должна быть уникальной для каждой операции</div>
           </div>
           <div>
             <label className="block text-sm">Итерации PBKDF2</label>
-            <input type="number" className="input w-full mt-1 font-mono" value={iterations} onChange={e=>setIterations(Number(e.target.value))} />
+            <input type="number" className="input w-full mt-1 font-mono" value={iterations} onChange={e=>setIterations(Number(e.currentTarget.value))} />
           </div>
           <div className="flex gap-2 pt-1">
             <button className="btn" onClick={()=>setSalt(generateSalt(12))}>Новая соль</button>
@@ -61,11 +61,11 @@ export function EncryptPage() {
         <div className="space-y-3">
           <div>
             <label className="block text-sm">Открытый текст</label>
-            <textarea className="textarea w-full mt-1 font-mono" rows={7} value={plaintext} onChange={e=>setPlaintext(e.target.value)} />
+            <textarea className="textarea w-full mt-1 font-mono" rows={7} value={plaintext} onChange={e=>setPlaintext(e.currentTarget.value)} />
           </div>
           <div>
             <label className="block text-sm">Шифртекст (base64url)</label>
-            <textarea className="textarea w-full mt-1 font-mono" rows={7} value={ciphertext} onChange={e=>setCiphertext(e.target.value)} />
+            <textarea className="textarea w-full mt-1 font-mono" rows={7} value={ciphertext} onChange={e=>setCiphertext(e.currentTarget.value)} />
           </div>
           {error && <div className="text-red-400">Ошибка: {error}</div>}
         </div>
