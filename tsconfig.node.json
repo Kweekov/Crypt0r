@@ -14,5 +14,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
-  }
+  },
+  "include": [
+    "vite.config.ts",
+    "eslint.config.js"
+  ]
 }
