@@ -11,8 +11,8 @@ export default function App() {
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-semibold tracking-tight">[ Crypt0r ]</h1>
             <nav className="flex gap-2 text-sm">
-              <Link className={`btn ${path.startsWith('/encrypt') ? 'primary' : 'outline'}`} to="/encrypt">Шифрование</Link>
-              <Link className={`btn ${path.startsWith('/decrypt') ? 'primary' : 'outline'}`} to="/decrypt">Расшифровка</Link>
+              <Link className={`btn ${path.includes('/encrypt') ? 'primary' : 'outline'}`} to="encrypt">Шифрование</Link>
+              <Link className={`btn ${path.includes('/decrypt') ? 'primary' : 'outline'}`} to="decrypt">Расшифровка</Link>
             </nav>
           </div>
           <p className="text-sm text-emerald-300/80 mt-1">Шифратор паролем — HMAC-поток (PBKDF2)</p>
